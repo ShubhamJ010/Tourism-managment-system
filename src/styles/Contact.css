@@ -1,0 +1,39 @@
+/* src/styles/Contact.css */
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  
+  .form-control {
+    margin-bottom: 15px;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .contact-info {
+    padding-left: 40px;
+  }
+  
+  .contact-info-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info-detail {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 576px) {
+    .contact-info {
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  }
+  

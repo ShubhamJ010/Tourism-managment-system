@@ -1,0 +1,109 @@
+/* styles/Destinations.css */
+
+/* Style for the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Style for the heading */
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the destination card */
+  .destination-card {
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .destination-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Style for the card image */
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Style for the destination card body */
+  .destination-card-body {
+    padding: 15px;
+  }
+  
+  /* Style for the card title */
+  .card-title {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Style for the card text */
+  .card-text {
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the Explore button */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  /* styles/Destinations.css */
+
+/* Style for the container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Style for the heading */
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the card */
+  .card {
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Style for the card image */
+  .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Style for the card title */
+  .card-title {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Style for the card text */
+  .card-text {
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the Learn More button */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
