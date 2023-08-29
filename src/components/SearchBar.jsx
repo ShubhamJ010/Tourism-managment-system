@@ -1,15 +1,16 @@
 // src/components/SearchBar.jsx
-import React from 'react';
-import '../styles/SearchBar.css'; // Import your custom CSS file
+import React from "react";
+import "../styles/SearchBar.css"; // Import your custom CSS file
 
 const SearchBar = ({ onSearch }) => {
   return (
-    <div className="search-bar">
+    <div className="search-box">
       <input
         type="text"
-        placeholder="Search places..."
+        className="search-bar"
+        placeholder="Search Places..."
         onChange={(e) => onSearch(e.target.value)}
-        className="search-input"
+        //value={query}
       />
     </div>
   );

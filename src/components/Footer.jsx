@@ -21,13 +21,13 @@ const Footer = () => {
               Stay connected with us on social media for the latest updates.
             </p>
             <div className="social-icons">
-              <a href="#" className="social-icon">
+              <a href="facebook.com" className="social-icon">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a href="#" className="social-icon">
+              <a href="x.com" className="social-icon">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
-              <a href="#" className="social-icon">
+              <a href="instagram.com" className="social-icon">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
             </div>

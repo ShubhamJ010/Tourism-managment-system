@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "../styles/Destinations.css";
 import SearchBar from "./SearchBar";
-import { Link } from "react-router-dom";
+import { DestinationsCard } from "./DestinationsCard";
 
 const Destinations = () => {
   const destinations = [
@@ -48,6 +48,9 @@ const Destinations = () => {
   const filterDestination = destinations.filter((card) =>
     card.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+  // console.log(filterDestination);
+  // console.log("i love you so much");
+
   return (
     <div className="container mt-5">
       {/* <h2 className="mb-4">Explore Destinations</h2> */}
@@ -63,26 +66,8 @@ const Destinations = () => {
           </p>
           <SearchBar onSearch={setSearchTerm} />
         </div>
-        {filterDestination.map((destination) => (
-          <div className="col-md-4 mb-4" key={destination.id}>
-            <div className="destination-card">
-              <img
-                src={`images/${destination.image}`}
-                alt={destination.title}
-                className="card-image"
-              />
-              <div className="destination-card-body">
-                <h5 className="card-title">{destination.title}</h5>
-                <p className="card-text">{destination.description}</p>
-                <Link
-                  to={`/Er/${destination.title}`}
-                  className="btn btn-primary"
-                >
-                  Explore
-                </Link>
-              </div>
-            </div>
-          </div>
+        {filterDestination.map((des) => (
+          <DestinationsCard Destination={des} />
         ))}
       </div>
     </div>

@@ -1,56 +1,84 @@
-// src/components/Navbar.js
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "../styles/NavBar.css";
 
-const Navbar = () => {
+function NavBar() {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <Link to="/" className="navbar-brand">
-          TourTravel
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto"> {/* Add ml-auto here */}
-            {/* Other navigation links */}
-          </ul>
-        </div>
-        <ul className="navbar-nav ml-auto"> {/* Add ml-auto here */}
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          
-          <li className="nav-item">
-            <Link to="/Destinations" className="nav-link">
-              Destinations
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/Book" className="nav-link">
-              Book
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/contact" className="nav-link">
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
-};
+    <>
+      <nav className="navbar">
+        <div className="nav-container">
+          {/* <NavLink exact to="/" className="nav-logo">
+            TourTravel
+            <i className="fas fa-code"></i>
+          </NavLink> */}
 
-export default Navbar;
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/Destinations"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Destinations
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/Book"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Booking
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/contact"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Contact Us
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/about"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                About
+              </NavLink>
+            </li>
+          </ul>
+          <div className="nav-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+}
+
+export default NavBar;

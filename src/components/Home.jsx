@@ -68,12 +68,19 @@ const Home = () => {
 
   return (
     <div className="container mt-5">
-      <div className="jumbotron">
-        <h1 className="display-4">Welcome to TourTravel</h1>
-        <p className="lead">
-          Your ultimate destination for amazing travel experiences.
-        </p>
-        <p>
+      <header
+        className=" text-white py-4 rounded-top"
+        style={{ backgroundColor: "#0d7a84" }}
+      >
+        <div className="container">
+          <h1 className="display-4">Travel Booking System</h1>
+          <p className="lead">
+            Explore the world with our easy booking services.
+          </p>
+        </div>
+      </header>
+      <div className="jumbotron rounded-bottom">
+        <p className="Lead">
           Explore our wide range of tour packages and create unforgettable
           memories.
         </p>
@@ -131,7 +138,6 @@ const Home = () => {
             </div>
           </div>
         ))}
-        {/*  */}
         <div className="testimonials-section mt-5">
           <div className="container">
             <h1>What Our Customers Say</h1>
@@ -149,7 +155,7 @@ const Home = () => {
                       alt="User"
                       className="testimonial-author-image"
                     />
-                    <h6 className="testimonial-author-name">Jane Doe</h6>
+                    <h6 className="testimonial-author-name">Shubham Jha</h6>
                     <p className="testimonial-author-title">
                       Frequent Traveler
                     </p>
@@ -169,7 +175,7 @@ const Home = () => {
                       alt="User"
                       className="testimonial-author-image"
                     />
-                    <h6 className="testimonial-author-name">John Smith</h6>
+                    <h6 className="testimonial-author-name">Paras Bhaita</h6>
                     <p className="testimonial-author-title">Adventurer</p>
                   </div>
                 </div>
@@ -187,9 +193,7 @@ const Home = () => {
                       alt="User"
                       className="testimonial-author-image"
                     />
-                    <h6 className="testimonial-author-name">
-                      Mitchell jhonson
-                    </h6>
+                    <h6 className="testimonial-author-name">Shakti Ojha</h6>
                     <p className="testimonial-author-title">Explorer</p>
                   </div>
                 </div>

@@ -1,26 +1,39 @@
 /* styles/SearchBar.css */
-.search-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    border-radius: 10px; /* Adding curved edges */
-    background-color: #f8f9fa; /* Adding a light background color */
-    padding: 10px; /* Adding padding */
-  }
+.search-box{
+  width: 100%;
+  display: flex;
+    /* align-items: center; */
+    justify-content :center;
+    margin-bottom: 7em;
+    
+}
+.search-box .search-bar
+{
+  backdrop-filter: blur(10px);
+   display: block;
+  width: 50%;
+  padding: 15px;
+  border: 10px; 
+  outline: none;
+
+border-radius: 35px 35px 35px 35px;
   
-  .search-input {
-    padding: 10px;
-    border:black; /* Removing the border */
-    border-radius: 5px; /* Adding curved edges */
-    width: 100%;
-    max-width: 300px;
-    transition: background-color 5s;
-  }
+background-color: rgba(37, 31, 31, 0.2);
+
   
-  .search-input:focus {
-    outline: none;
-    background-color: #fff; /* Changing background color when focused */
-    box-shadow: 0 0 5px rgba(22, 22, 22, 0.5);
-  }
+  color: hsl(0, 100%, 1%);
+  font-size: 20px;
+
+ transition: 0.4s ease-in-out; 
+}
+.search-box .search-bar:focus
+{
+  width: 80%;
+  border-radius: 5px 5px 5px 5px;
+  border: 10em;
+  background-color: rgba(22, 14, 14, 0.5);
+ 
+}
+
+
   
