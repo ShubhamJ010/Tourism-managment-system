@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 import Destinations from "./components/Destinations";
@@ -14,7 +14,7 @@ import { NavbarProvider } from "./context/NavbarContext";
 function App() {
   return (
     <div className="App">
-      <Router basename="/Tourism-managment-system">
+      <BrowserRouter basename="/Tourism-managment-system/">
         <NavbarProvider>
           <Navbar />
           <Routes>
@@ -28,7 +28,7 @@ function App() {
             <Route path="/Er/:loc" element={<ExternalRedirect />} />
           </Routes>
         </NavbarProvider>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }
