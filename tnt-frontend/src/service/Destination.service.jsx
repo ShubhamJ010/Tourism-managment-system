@@ -47,6 +47,16 @@ const DestinationService = {
         throw error;
       });
   },
+  updateBookStatus: (destinationId, newBookStatus) => {
+    return axios
+      .put(`${API_BASE_URL}/destination/updateBookStatus/${destinationId}`, {
+        book: newBookStatus,
+      })
+      .then((response) => response.data)
+      .catch((error) => {
+        throw error;
+      });
+  },
 };
 
 export default DestinationService;

@@ -1,6 +1,7 @@
 package com.tnt.TourTravelApi.controller;
 
 import java.util.List;
+import java.util.Map;
 
 // import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,5 +52,9 @@ public class DestinationController {
         return service.getBookedDestinations();
     }
 
-    
+    @PutMapping("/updateBookStatus/{id}")
+    public Destination updateBookStatus(@PathVariable int id, @RequestBody Map<String, Boolean> request) {
+        boolean newBookStatus = request.get("book");
+        return service.updateBookStatus(id, newBookStatus);
+    }
 }

@@ -29,4 +29,12 @@ public class DestinationService {
     public List<Destination> getBookedDestinations() {
         return repository.findByBookTrue();
     }
+
+    public Destination updateBookStatus(int id, boolean newBookStatus) {
+        Destination destination = repository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid destination ID: " + id));
+
+        destination.setBook(newBookStatus);
+        return repository.save(destination);
+    }
 }
