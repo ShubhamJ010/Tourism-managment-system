@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/NavBar.css";
+import { useNavbarContext } from "../context/NavbarContext";
 
 function NavBar() {
   const [click, setClick] = useState(false);
+
+  const { showNavbar } = useNavbarContext();
+
+  if (!showNavbar) {
+    return null;
+  }
 
   const handleClick = () => setClick(!click);
   return (
@@ -19,7 +26,7 @@ function NavBar() {
             <li className="nav-item">
               <NavLink
                 exact
-                to="/"
+                to="/home"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}

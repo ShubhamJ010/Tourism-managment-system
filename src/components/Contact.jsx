@@ -82,69 +82,71 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact d-flex align-items-center justify-content-center">
-      <div className="container">
-        <h1 className="text-center">Contact Us</h1>
-        <form ref={form} onSubmit={sendEmail}>
-          <div className="mb-3">
-            <input
-              type="text"
-              name="name"
-              className={`form-control ${errors.name && "is-invalid"}`}
-              placeholder="Enter your name"
-              onChange={handleInputChange}
-            />
-            <div className="invalid-feedback">{errors.name}</div>
-          </div>
-          <div className="mb-3">
-            <input
-              type="text"
-              name="address"
-              className={`form-control ${errors.address && "is-invalid"}`}
-              placeholder="Enter your address"
-              onChange={handleInputChange}
-            />
-            <div className="invalid-feedback">{errors.address}</div>
-          </div>
-          <div className="mb-3">
-            <input
-              type="text"
-              name="phoneNumber"
-              className={`form-control ${errors.phoneNumber && "is-invalid"}`}
-              placeholder="Enter your phone number"
-              onChange={handleInputChange}
-            />
-            <div className="invalid-feedback">{errors.phoneNumber}</div>
-          </div>
-          <div className="mb-3">
-            <input
-              type="email"
-              name="email"
-              className={`form-control ${errors.email && "is-invalid"}`}
-              placeholder="Enter your email"
-              onChange={handleInputChange}
-            />
-            <div className="invalid-feedback">{errors.email}</div>
-          </div>
-          <div className="mb-3">
-            <textarea
-              name="area"
-              className={`form-control ${errors.area && "is-invalid"}`}
-              placeholder="Leave a message for us"
-              rows="4"
-              onChange={handleInputChange}
-            />
-            <div className="invalid-feedback">{errors.area}</div>
-          </div>
-          <button className="btn btn-primary" type="submit">
-            Submit
-          </button>
-        </form>
-        {done && (
-          <div className="alert alert-success mt-3">
-            Form submitted successfully!
-          </div>
-        )}
+    <div className="contact d-flex justify-content-center align-items-center vh-100">
+      <div className="card contact-card p-4">
+        <div className="container">
+          <h1 className="text-center mb-4">Contact Us</h1>
+          <form ref={form} onSubmit={sendEmail}>
+            <div className="mb-3">
+              <input
+                type="text"
+                name="name"
+                className={`form-control ${errors.name && "is-invalid"}`}
+                placeholder="Enter your name"
+                onChange={handleInputChange}
+              />
+              <div className="invalid-feedback">{errors.name}</div>
+            </div>
+            <div className="mb-3">
+              <input
+                type="text"
+                name="address"
+                className={`form-control ${errors.address && "is-invalid"}`}
+                placeholder="Enter your address"
+                onChange={handleInputChange}
+              />
+              <div className="invalid-feedback">{errors.address}</div>
+            </div>
+            <div className="mb-3">
+              <input
+                type="text"
+                name="phoneNumber"
+                className={`form-control ${errors.phoneNumber && "is-invalid"}`}
+                placeholder="Enter your phone number"
+                onChange={handleInputChange}
+              />
+              <div className="invalid-feedback">{errors.phoneNumber}</div>
+            </div>
+            <div className="mb-3">
+              <input
+                type="email"
+                name="email"
+                className={`form-control ${errors.email && "is-invalid"}`}
+                placeholder="Enter your email"
+                onChange={handleInputChange}
+              />
+              <div className="invalid-feedback">{errors.email}</div>
+            </div>
+            <div className="mb-3">
+              <textarea
+                name="area"
+                className={`form-control ${errors.area && "is-invalid"}`}
+                placeholder="Leave a message for us"
+                rows="4"
+                onChange={handleInputChange}
+              />
+              <div className="invalid-feedback">{errors.area}</div>
+            </div>
+            <button className="btn btn-primary" type="submit">
+              Submit
+            </button>
+          </form>
+          {done && (
+            <div className="alert alert-success mt-3">
+              Form submitted successfully!
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

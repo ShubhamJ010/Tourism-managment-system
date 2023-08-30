@@ -3,6 +3,7 @@ import "../styles/Home.css";
 import SearchBar from "../components/SearchBar";
 import Carousel from "react-bootstrap/Carousel";
 import Footer from "./Footer";
+import { useNavbarContext } from "../context/NavbarContext";
 
 const Home = () => {
   const cardData = [
@@ -65,6 +66,9 @@ const Home = () => {
   const filteredCards = cardData.filter((card) =>
     card.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const { setShowNavbar } = useNavbarContext();
+  setShowNavbar(true);
 
   return (
     <div className="container mt-5">

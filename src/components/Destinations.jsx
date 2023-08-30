@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import "../styles/Destinations.css";
 import SearchBar from "./SearchBar";
 import { DestinationsCard } from "./DestinationsCard";
+import { useNavbarContext } from "../context/NavbarContext";
 
 const Destinations = () => {
+    const { setShowNavbar } = useNavbarContext();
+    setShowNavbar(true);
   const destinations = [
     {
       id: 1,

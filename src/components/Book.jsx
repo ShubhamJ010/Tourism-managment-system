@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import { BookCard } from "./BookCard";
 import SearchBar from "./SearchBar";
+import { useNavbarContext } from "../context/NavbarContext";
 
 const Book = () => {
-  const bookingData = [
-    
-  ];
+  const { setShowNavbar } = useNavbarContext();
+  setShowNavbar(true);
+  const bookingData = [];
   const [searchTerm, setSearchTerm] = useState("");
 
   const filterBooking = bookingData.filter((card) =>
