@@ -21,6 +21,6 @@ public class Destination {
     public String title;
     public String image;
     public String description;
-    public Boolean Book;
+    public Boolean book;
 
 }

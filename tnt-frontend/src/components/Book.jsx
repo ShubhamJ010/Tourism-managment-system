@@ -1,26 +1,24 @@
 // src/pages/Book.jsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BookCard } from "./BookCard";
 import SearchBar from "./SearchBar";
 import { useNavbarContext } from "../context/NavbarContext";
+import DestinationService from "../service/Destination.service";
 
 const Book = () => {
   const { setShowNavbar } = useNavbarContext();
   setShowNavbar(true);
-  const bookingData = [
-    {
-      id: 1,
-      title: "Beach",
-      image: "beach.jpg",
-      description: "Relax on pristine beaches with crystal clear waters.",
-    },
-    {
-      id: 2,
-      title: "Ladhka",
-      image: "ladakh.jpg",
-      description: "Relax on pristine beaches with crystal clear waters.",
-    },
-  ];
+  const [bookingData, setDestinations] = useState([]);
+  useEffect(() => {
+    // Fetch and display all destinations when the component mounts
+    DestinationService.getBookedDestinations()
+      .then((data) => {
+        setDestinations(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching destinations:", error);
+      });
+  }, []);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filterBooking = bookingData.filter((card) =>

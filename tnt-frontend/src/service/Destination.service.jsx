@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8083"; 
+const API_BASE_URL = "http://localhost:8083";
 
 const DestinationService = {
   addDestination: (destinationData) => {
@@ -33,6 +33,15 @@ const DestinationService = {
   updateDestination: (destinationData) => {
     return axios
       .put(`${API_BASE_URL}/destination/updatedestination`, destinationData)
+      .then((response) => response.data)
+      .catch((error) => {
+        throw error;
+      });
+  },
+
+  getBookedDestinations: () => {
+    return axios
+      .get(`${API_BASE_URL}/destination/booked`)
       .then((response) => response.data)
       .catch((error) => {
         throw error;

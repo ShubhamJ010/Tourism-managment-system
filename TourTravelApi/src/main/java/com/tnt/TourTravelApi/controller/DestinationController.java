@@ -1,5 +1,7 @@
 package com.tnt.TourTravelApi.controller;
 
+import java.util.List;
+
 // import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -44,4 +46,10 @@ public class DestinationController {
         return service.addDestination(ss);
     }
 
+    @GetMapping("/booked")
+    public List<Destination> getBookedDestinations() {
+        return service.getBookedDestinations();
+    }
+
+    
 }

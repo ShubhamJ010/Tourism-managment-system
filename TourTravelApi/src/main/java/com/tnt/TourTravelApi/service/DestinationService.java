@@ -25,4 +25,8 @@ public class DestinationService {
     public Destination getDestinationById(int id) {
         return repository.findById(id).orElseThrow();
     }
+
+    public List<Destination> getBookedDestinations() {
+        return repository.findByBookTrue();
+    }
 }
