@@ -16,8 +16,8 @@ import com.tnt.TourTravelApi.model.Destination;
 import com.tnt.TourTravelApi.service.DestinationService;
 
 @RestController
-@RequestMapping("/supplier")
-@CrossOrigin(origins = "http://localhost:4200", allowedHeaders = "*")
+@RequestMapping("/destination")
+@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 
 public class DestinationController {
     @Autowired

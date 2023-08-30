@@ -1,51 +1,25 @@
 // src/pages/Destinations.jsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Destinations.css";
 import SearchBar from "./SearchBar";
 import { DestinationsCard } from "./DestinationsCard";
 import { useNavbarContext } from "../context/NavbarContext";
+import DestinationService from "../service/Destination.service";
 
 const Destinations = () => {
-    const { setShowNavbar } = useNavbarContext();
-    setShowNavbar(true);
-  const destinations = [
-    {
-      id: 1,
-      title: "Banaras",
-      image: "Banaras.jpg",
-      description: "Relax on pristine beaches with crystal clear waters.",
-    },
-    {
-      id: 2,
-      title: "Kedarnath",
-      image: "Kedarnath.jpg",
-      description: "Embark on thrilling hikes and enjoy stunning vistas.",
-    },
-    {
-      id: 3,
-      title: "Kashmir",
-      image: "Kashmir.jpg",
-      description: "Immerse yourself in rich history and local traditions.",
-    },
-    {
-      id: 1,
-      title: "Banaras",
-      image: "Banaras.jpg",
-      description: "Relax on pristine beaches with crystal clear waters.",
-    },
-    {
-      id: 2,
-      title: "Kedarnath",
-      image: "Kedarnath.jpg",
-      description: "Embark on thrilling hikes and enjoy stunning vistas.",
-    },
-    {
-      id: 3,
-      title: "Kashmir",
-      image: "Kashmir.jpg",
-      description: "Immerse yourself in rich history and local traditions.",
-    },
-  ];
+  const { setShowNavbar } = useNavbarContext();
+  setShowNavbar(true);
+  const [destinations, setDestinations] = useState([]);
+  useEffect(() => {
+    // Fetch and display all destinations when the component mounts
+    DestinationService.getAllDestinations()
+      .then((data) => {
+        setDestinations(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching destinations:", error);
+      });
+  }, []);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filterDestination = destinations.filter((card) =>
