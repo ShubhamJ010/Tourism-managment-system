@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Banaras",
+        "image": "Banaras.jpg",
+        "description": "Relax on pristine beaches with crystal clear waters.",
+        "book": false
+    },
+    {
+        "id": 2,
+        "title": "Kedarnath",
+        "image": "Kedarnath.jpg",
+        "description": "Embark on thrilling hikes and enjoy stunning vistas.",
+        "book": false
+    },
+    {
+        "id": 3,
+        "title": "Kashmir",
+        "image": "Kashmir.jpg",
+        "description": "Immerse yourself in rich history and local traditions.",
+        "book": false
+    },
+    {
+        "id": 52,
+        "title": "Beach",
+        "image": "beach.jpg",
+        "description": "Relax on pristine beaches with crystal clear waters.",
+        "book": true
+    },
+    {
+        "id": 53,
+        "title": "Ladhka",
+        "image": "Ladhka.jpg",
+        "description": "Relax on pristine beaches with crystal clear waters.",
+        "book": true
+    }
+]
