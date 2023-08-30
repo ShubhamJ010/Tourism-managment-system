@@ -1,14 +1,27 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react"; // Import useState
 import "../styles/Destinations.css";
+import DestinationService from "../service/Destination.service";
 
 export const DestinationsCard = (destination) => {
   const [isBookmarked, setIsBookmarked] = useState(
     destination.Destination.book
-  ); // State for bookmarking
-
+  );
   const toggleBookmark = () => {
-    setIsBookmarked((prevIsBookmarked) => !prevIsBookmarked); // Toggle bookmark state
+    const newBookStatus = !isBookmarked;
+    setIsBookmarked(newBookStatus);
+
+    DestinationService.updateBookStatus(
+      destination.Destination.id,
+      newBookStatus
+    )
+      .then((updatedDestination) => {
+        console.log("🥰🥰🥰");
+        console.log(updatedDestination);
+      })
+      .catch((error) => {
+        console.error("Error updating book status:", error);
+      });
   };
 
   console.log("😁😁😁😁");
