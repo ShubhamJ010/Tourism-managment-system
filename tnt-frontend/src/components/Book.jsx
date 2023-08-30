@@ -7,7 +7,20 @@ import { useNavbarContext } from "../context/NavbarContext";
 const Book = () => {
   const { setShowNavbar } = useNavbarContext();
   setShowNavbar(true);
-  const bookingData = [];
+  const bookingData = [
+    {
+      id: 1,
+      title: "Beach",
+      image: "beach.jpg",
+      description: "Relax on pristine beaches with crystal clear waters.",
+    },
+    {
+      id: 2,
+      title: "Ladhka",
+      image: "ladakh.jpg",
+      description: "Relax on pristine beaches with crystal clear waters.",
+    },
+  ];
   const [searchTerm, setSearchTerm] = useState("");
 
   const filterBooking = bookingData.filter((card) =>
