@@ -1,5 +1,7 @@
 // NavbarContext.js
 import { createContext, useContext, useState } from "react";
+import { BookCard } from "../components/BookCard";
+import Booking from "../pages/Booking";
 // import { useLocation } from "react-router";
 
 const NavbarContext = createContext();
@@ -7,9 +9,10 @@ const NavbarContext = createContext();
 export const NavbarProvider = ({ children }) => {
   //   const location = useLocation();
   const [showNavbar, setShowNavbar] = useState(true);
+  const [showBooknow, setshowBooknow] = useState(true);
 
   return (
-    <NavbarContext.Provider value={{ showNavbar, setShowNavbar }}>
+    <NavbarContext.Provider value={{ showNavbar, setShowNavbar,showBooknow, setshowBooknow }}>
       {children}
     </NavbarContext.Provider>
   );

@@ -8,6 +8,8 @@ import DestinationService from "../service/Destination.service";
 const Book = () => {
   const { setShowNavbar } = useNavbarContext();
   setShowNavbar(true);
+  const { setshowBooknow } = useNavbarContext();
+  setshowBooknow(true)
   const [bookingData, setDestinations] = useState([]);
   useEffect(() => {
     // Fetch and display all destinations when the component mounts

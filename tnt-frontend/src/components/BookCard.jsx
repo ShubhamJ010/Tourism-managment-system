@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import "../styles/Book.css";
+import { useNavbarContext } from "../context/NavbarContext";
 export const BookCard = (props) => {
   console.log("😁😁😁😁");
   console.log(props.Book);
+  const { showBooknow } = useNavbarContext();
   return (
     <div className="col-md-4 mb-4" key={props.Book.id}>
       <div className="card">
@@ -15,9 +17,9 @@ export const BookCard = (props) => {
         <div className="card-body">
           <h5 className="card-title">{props.Book.title}</h5>
           <p className="card-text">{props.Book.description}</p>
-          <a href="#" className="btn btn-primary">
+          {showBooknow && <Link to={`/book/${props.Book.id}`}  className="btn btn-primary">
             Book Now
-          </a>
+          </Link>}
         </div>
       </div>
     </div>
