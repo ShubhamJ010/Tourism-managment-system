@@ -33,5 +33,12 @@
         "image": "Ladhka.jpg",
         "description": "Relax on pristine beaches with crystal clear waters.",
         "book": true
+    },
+    {
+        "id": 1,
+        "name": "Shubham",
+        "phoneNumber": "8076592551",
+        "fromDate": 2001-03-03,
+        "toDate": 2001-03-31,
     }
 ]

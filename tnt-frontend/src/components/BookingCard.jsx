@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
 const BookingCard = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phoneNumber: '',
-    fromDate: '',
-    toDate: '',
+    name: "",
+    phoneNumber: "",
+    fromDate: "",
+    toDate: "",
   });
 
   const handleInputChange = (event) => {
@@ -19,7 +18,8 @@ const BookingCard = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", phoneNumber: "", fromDate: "", toDate: "" });
   };
 
   return (

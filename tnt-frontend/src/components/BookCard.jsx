@@ -2,15 +2,17 @@ import { Link } from "react-router-dom";
 import React from "react";
 import "../styles/Book.css";
 import { useNavbarContext } from "../context/NavbarContext";
+
 export const BookCard = (props) => {
-  console.log("😁😁😁😁");
-  console.log(props.Book);
+  // console.log("😁😁😁😁");
+  // console.log(props.Book);
+  // console.log(process.env.PUBLIC_URL);
   const { showBooknow } = useNavbarContext();
   return (
     <div className="col-md-4 mb-4" key={props.Book.id}>
       <div className="card">
         <img
-          src={`images/${props.Book.image}`}
+          src={`${process.env.PUBLIC_URL}/images/${props.Book.image}`}
           alt={props.Book.title}
           className="card-image"
         />
