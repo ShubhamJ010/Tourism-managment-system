@@ -4,13 +4,14 @@ import Contact from "./pages/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
-import Destinations from "./components/Destinations";
+import Destinations from "./pages/Destinations";
 import Book from "./pages/Book";
 import ExternalRedirect from "./components/ExternalRedirector";
 import About from "./pages/About";
 import AuthForm from "./pages/AuthForm";
 import Login from "./pages/Login";
 import { NavbarProvider } from "./context/NavbarContext";
+import Booking from "./pages/Booking";
 function App() {
   return (
     <div className="App">
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/Contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/Er/:loc" element={<ExternalRedirect />} />
+            <Route path="/Book/:id" element={<Booking />} />
           </Routes>
         </NavbarProvider>
       </BrowserRouter>

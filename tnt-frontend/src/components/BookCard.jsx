@@ -17,9 +17,11 @@ export const BookCard = (props) => {
         <div className="card-body">
           <h5 className="card-title">{props.Book.title}</h5>
           <p className="card-text">{props.Book.description}</p>
-          {showBooknow && <Link to={`/book/${props.Book.id}`}  className="btn btn-primary">
-            Book Now
-          </Link>}
+          {showBooknow && (
+            <Link to={`/book/${props.Book.id}`} className="btn btn-primary">
+              Book Now
+            </Link>
+          )}
         </div>
       </div>
     </div>

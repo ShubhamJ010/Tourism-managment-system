@@ -1,8 +1,8 @@
 // src/pages/Destinations.jsx
 import React, { useEffect, useState } from "react";
 import "../styles/Destinations.css";
-import SearchBar from "./SearchBar";
-import { DestinationsCard } from "./DestinationsCard";
+import SearchBar from "../components/SearchBar";
+import { DestinationsCard } from "../components/DestinationsCard";
 import { useNavbarContext } from "../context/NavbarContext";
 import DestinationService from "../service/Destination.service";
 
