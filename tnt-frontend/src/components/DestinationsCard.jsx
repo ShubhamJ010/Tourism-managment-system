@@ -46,7 +46,7 @@ export const DestinationsCard = (destination) => {
           <button
             className={`btn ${
               isBookmarked ? "btn-success" : "btn-outline-secondary"
-            } ml-3`} // Change button color based on bookmark state
+            } ms-3`} // Change button color based on bookmark state
             onClick={toggleBookmark}
           >
             {isBookmarked ? "Bookmarked" : "Bookmark"}

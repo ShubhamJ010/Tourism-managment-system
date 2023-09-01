@@ -1,7 +1,7 @@
 // src/pages/Book.jsx
 import React, { useEffect, useState } from "react";
-import { BookCard } from "./BookCard";
-import SearchBar from "./SearchBar";
+import { BookCard } from "../components/BookCard";
+import SearchBar from "../components/SearchBar";
 import { useNavbarContext } from "../context/NavbarContext";
 import DestinationService from "../service/Destination.service";
 

@@ -1,15 +1,15 @@
 import "./App.css";
-import Home from "./components/Home";
-import Contact from "./components/Contact";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 import Destinations from "./components/Destinations";
-import Book from "./components/Book";
+import Book from "./pages/Book";
 import ExternalRedirect from "./components/ExternalRedirector";
 import About from "./pages/About";
-import AuthForm from "./components/AuthForm";
-import Login from "./components/Login";
+import AuthForm from "./pages/AuthForm";
+import Login from "./pages/Login";
 import { NavbarProvider } from "./context/NavbarContext";
 function App() {
   return (

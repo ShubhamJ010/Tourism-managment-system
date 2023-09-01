@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/Home.css";
 import SearchBar from "../components/SearchBar";
 import Carousel from "react-bootstrap/Carousel";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 import { useNavbarContext } from "../context/NavbarContext";
 
 const Home = () => {
