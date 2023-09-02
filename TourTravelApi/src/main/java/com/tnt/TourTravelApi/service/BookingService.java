@@ -13,9 +13,13 @@ public class BookingService {
     @Autowired
     public BookingDao repository;
 
-    public Booking addBooking(Booking ss) {
-        return repository.save(ss);
-    }
+    public Booking addBooking(Booking booking) {
+    // if (repository.findByPhoneNo(booking.getPhoneNo()) != null) {
+    //     throw new IllegalArgumentException("Phone number already present");
+    // }
+    return repository.save(booking);
+}
+
 
     public List<Booking> getBookings() {
         return repository.findAll();

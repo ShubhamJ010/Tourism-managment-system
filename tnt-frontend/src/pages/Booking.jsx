@@ -28,7 +28,7 @@ const Booking = () => {
       <div className="row">
         <BookCard Book={bookData} />
         <div className="col-md-6">
-          <BookingCard />
+          <BookingCard Book={bookData} />
         </div>
       </div>
     </div>
