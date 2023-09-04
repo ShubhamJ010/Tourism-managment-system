@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tnt.TourTravelApi.model.Booking;
@@ -15,7 +16,7 @@ import com.tnt.TourTravelApi.service.BookingService;
 
 @RestController
 @RequestMapping("/booking")
-@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+@CrossOrigin("*")
 public class BookingController {
     @Autowired
     private BookingService service;
@@ -39,6 +40,11 @@ public class BookingController {
     @PutMapping("/updatebooking")
     public Booking updateSupplier(@RequestBody Booking ss) {
         return service.addBooking(ss);
+    }
+
+    @GetMapping("/count")
+    public int getCountById(@RequestParam int id) {
+        return service.countBookingsWithDestinationId(id);
     }
 
 }

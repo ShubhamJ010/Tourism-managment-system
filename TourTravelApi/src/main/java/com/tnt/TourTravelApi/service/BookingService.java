@@ -14,12 +14,11 @@ public class BookingService {
     public BookingDao repository;
 
     public Booking addBooking(Booking booking) {
-    // if (repository.findByPhoneNo(booking.getPhoneNo()) != null) {
-    //     throw new IllegalArgumentException("Phone number already present");
-    // }
-    return repository.save(booking);
-}
-
+        // if (repository.findByPhoneNo(booking.getPhoneNo()) != null) {
+        // throw new IllegalArgumentException("Phone number already present");
+        // }
+        return repository.save(booking);
+    }
 
     public List<Booking> getBookings() {
         return repository.findAll();
@@ -29,4 +28,10 @@ public class BookingService {
         return repository.findById(id).orElseThrow();
     }
 
+    // public int countBookingsWithDestinationId(int destinationId) {
+    //     return repository.countBookingsWithDestinationId(destinationId);
+    // }
+    public int countBookingsWithDestinationId(int destinationId) {
+        return repository.countByDestinationId(destinationId);
+    }
 }

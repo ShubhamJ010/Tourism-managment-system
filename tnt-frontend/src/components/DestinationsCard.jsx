@@ -1,12 +1,21 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react"; // Import useState
+import React, { useEffect, useState } from "react"; // Import useState
 import "../styles/Destinations.css";
 import DestinationService from "../service/Destination.service";
+import BookingService from "../service/Booking.service";
 
 export const DestinationsCard = (destination) => {
   const [isBookmarked, setIsBookmarked] = useState(
     destination.Destination.book
   );
+  const [bookedCount, setBookedCount] = useState(0);
+  useEffect(() => {
+    BookingService.getCountOfBooking(destination.Destination.id).then(
+      (data) => {
+        setBookedCount(data);
+      }
+    );
+  }, [destination.Destination.id]);
   const toggleBookmark = () => {
     const newBookStatus = !isBookmarked;
     setIsBookmarked(newBookStatus);
@@ -50,6 +59,9 @@ export const DestinationsCard = (destination) => {
             onClick={toggleBookmark}
           >
             {isBookmarked ? "Bookmarked" : "Bookmark"}
+          </button>
+          <button type="button" class="btn btn-primary mt-2">
+            Already Booked: <span class="badge bg-success"> {bookedCount}</span>
           </button>
         </div>
       </div>
