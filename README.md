@@ -34,7 +34,8 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Drink And Delight @Coforge</h3>
+  <h3 align="center">TourTravel @Coforge</h3>
+
 
   <p align="center">
     An awesome README template to jumpstart your projects!
