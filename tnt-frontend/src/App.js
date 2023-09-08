@@ -3,7 +3,8 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-// import { ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Destinations from "./pages/Destinations";
 import Book from "./pages/Book";
 import ExternalRedirect from "./components/ExternalRedirector";
@@ -15,6 +16,7 @@ import Booking from "./pages/Booking";
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
       <BrowserRouter basename="/Tourism-managment-system/">
         <NavbarProvider>
           <Navbar />

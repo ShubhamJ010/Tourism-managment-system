@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "../styles/AuthForm.css";
 import { useNavbarContext } from "../context/NavbarContext";
+import { toast } from "react-toastify";
 
 const AuthForm = ({ isLogin }) => {
   const initialValues = {
@@ -22,10 +23,11 @@ const AuthForm = ({ isLogin }) => {
 
   const handleSubmit = (values, { setSubmitting }) => {
     // Simulate API call or other actions
+    toast.success("You are Signed up , Welcome Aboard");
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
       setSubmitting(false);
-    }, 400);
+    }, 2000);
   };
 
   return (
